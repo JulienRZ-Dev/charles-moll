@@ -29,6 +29,16 @@
     text-align: center;
 }
 
+@media (max-width: 1450px) {
+    .pepe {
+        z-index: 2;
+        position: absolute;
+        width: 420px;
+        top: 120px;
+        right: 0%;
+    }
+}
+
 @media (max-width: 1250px) {
     .bio {
         height: 750px;

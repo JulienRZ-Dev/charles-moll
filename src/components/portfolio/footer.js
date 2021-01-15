@@ -22,19 +22,19 @@ const Footer = (props) => {
 
           <div className="compose poppins18">
             <div className="first">
-              <a href="#">Animaux</a>
-              <Link to={"/famille" }>Famille</Link>
-              <a href="#">Art</a>
+              <Link to={"/animaux"}>Animaux</Link>
+              <Link to={"/famille"}>Famille</Link>
+              <Link to={"/art"}>Art</Link>
             </div>
             <div className="second">
-              <a href="#">Nature</a>
-              <a href="#">Voyages</a>
-              <a href="#">Vie sociale</a>
+              <Link to={"/nature"}>Nature</Link>
+              <Link to={"/voyages"}>Voyages</Link>
+              <Link to={"/viesociale"}>Vie sociale</Link>
             </div>
             <div className="third">
-              <a href="#">France</a>
-              <a href="#">Photoclub</a>
-              <a href="#">Avion</a>
+              <Link to={"/France"}>France</Link>
+              <Link to={"/photoclub"}>Photoclub</Link>
+              <Link to={"/avion"}>Aviation</Link>
             </div>
           </div>
 

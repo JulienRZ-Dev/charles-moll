@@ -94,10 +94,12 @@
     }
     .item1 {
         font-size: 15px;
+        margin-bottom: 20px;
         animation: slide 1s ease-in-out 1.5s both;
     }
     .item2 {
         font-size: 15px;
+        margin-bottom: 20px;
         animation: slide 1s ease-in-out 1.75s both;
     }
     .item3 {

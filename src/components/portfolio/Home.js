@@ -33,9 +33,9 @@ const Home = () => {
                     </svg>
                 </div>
                 <div id="menu" className={"menu"}>
-                    <div id="item1" className={"item1"}>Portfolio</div>
-                    <div id="item2" className={"item2"}>Qui suis-je</div>
-                    <div id="item3" className={"item3"}>Contact</div>
+                    <div id="item1" className={"item1 poppins18"}><a className="noLinkStyle" href="#slider">Portfolio</a></div>
+                    <div id="item2" className={"item2 poppins18"}><a className="noLinkStyle" href="#bio">Qui suis-je</a></div>
+                    <div id="item3" className={"item3 poppins18"}><a className="noLinkStyle" href="#contact">Contact</a></div>
                 </div>
             </div>
 

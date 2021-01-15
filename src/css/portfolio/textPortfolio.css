@@ -50,4 +50,15 @@ html {
     font-weight: 400;
     font-size: 20px;
     color: white;
+    line-height: 40px;
+}
+
+.noLinkStyle{
+    text-decoration: none;
+}
+
+@media (max-width: 1210px) {
+    .title4{
+        font-size: 23px;
+    }
 }

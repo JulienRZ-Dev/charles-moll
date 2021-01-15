@@ -41,7 +41,7 @@
     font-family: "Poppins-extralight";
     position: relative;
     width: auto;
-    min-height: 30vh;
+    min-height: 250px;
     transition: 0.5s;
     background-repeat: no-repeat;
     color: rgba(255, 255, 255, 0.6);

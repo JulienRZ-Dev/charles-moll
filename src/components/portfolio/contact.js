@@ -35,8 +35,8 @@ const Contact = () => {
     <div id="contact" className='perroquet'>
 
       <div className="contactPortfolio">
-        <h3 className="contactTitle title3">Contact</h3>
         <form id="contactform" spellCheck="false" onSubmit={sendEmail}>
+          <h3 className="contactTitle title3">Contact</h3>
           {/* <label for="name">Nom</label> */}
           <input className="contactInput" required type="text" id="name" name="name" placeholder="Nom" />
 
@@ -47,12 +47,12 @@ const Contact = () => {
           <input className="contactInput" required type="text" id="objet" name="objet" placeholder="Objet" />
 
           {/* <label for="message">Message</label> */}
-          <textarea required type="text" id="message" name="message" placeholder="Message"></textarea>
+          <textarea className="contactInput" required type="text" id="message" name="message" placeholder="Message"></textarea>
 
           <button data-sitekey="reCAPTCHA_site_key"
-                  data-callback='onSubmit'
-                  data-action='submit'
-                  className='contactcodeurs' type="submit" value="Send Message">Envoyer</button>
+            data-callback='onSubmit'
+            data-action='submit'
+            className='contactcodeurs' type="submit" value="Send Message">Envoyer</button>
 
           <p id="success" className="success poppinsRegular">Message envoyé !</p>
           <p id="failure" className="failure poppinsRegular">Une erreur est survenue...</p>
