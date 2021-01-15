@@ -30,12 +30,12 @@
 }
 
 .divzone {
-    height: 90vh;
+    height: 750px;
     overflow: hidden;
 }
 
 .zoneSlider {
-    top: -240vh;
+    top: -2000px;
     letter-spacing: 5px;
     font-weight: 200;
     font-family: "Poppins-extralight";
@@ -100,7 +100,7 @@
 .dotsdiv {
     left: 0;
     position: absolute;
-    height: 80vh;
+    height: 800px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -173,7 +173,7 @@
 
 @media (max-width: 1250px) {
     .slider{
-        margin-bottom: 0;
+        margin-bottom: -80px;
         margin-top: 0;
     }
 }
@@ -220,7 +220,6 @@
 
     .zoneSlider {
         font-size: 40px;
-        /* align-items: flex-end; */
     }
 
     #goTop {
@@ -237,7 +236,7 @@
     }
 
     .dotsdiv {
-        height: 80vh;
+        height: 600px;
     }
 
     .dots {
@@ -258,7 +257,6 @@
 
     .zone {
         font-size: 30px;
-        /* align-items: flex-end; */
     }
 
     #goTop {
@@ -276,12 +274,33 @@
         letter-spacing: 5px;
     }
 
-    .dotsdiv {
-        height: 80vh;
+    .dots {
+        height: 90px;
+        width: 90px;
+    }
+}
+
+@media (max-width: 400px) {
+    .slider {
+        background-position: 50%;
+    }
+
+    .divzone {
+        width: 75%;
+        margin-left: 20%;
+    }
+
+    .zoneSlider {
+        font-size: 25px;
+    }
+
+    .zoneSlider:hover {
+        font-size: 27px;
+        letter-spacing: 5px;
     }
 
     .dots {
         height: 90px;
-        width: 90px;
+        width: 70px;
     }
 }

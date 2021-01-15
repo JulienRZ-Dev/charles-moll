@@ -22,15 +22,15 @@ function Slider() {
     const [y1, setY1] = useState(8);
     const [count, setCount] = useState(0);
     const carousselDivIndex = [
-        {name: "zero", index: 0},
-        {name: "one", index: 1},
-        {name: "two", index: 2},
-        {name: "three", index: 3},
-        {name: "four", index: 4},
-        {name: "five", index: 5},
-        {name: "six", index: 6},
-        {name: "seven", index: 7},
-        {name: "eight", index: 8}
+        { name: "zero", index: 0 },
+        { name: "one", index: 1 },
+        { name: "two", index: 2 },
+        { name: "three", index: 3 },
+        { name: "four", index: 4 },
+        { name: "five", index: 5 },
+        { name: "six", index: 6 },
+        { name: "seven", index: 7 },
+        { name: "eight", index: 8 }
     ];
 
     var divStyle = {
@@ -124,61 +124,61 @@ function Slider() {
 
                 <div id="divzone" className="divzone">
 
-                    <Link to={"/famille" } className="zoneSlider" style={{ transform: `translateY(${30 * y1}vh)` }}>
+                    <Link to={"/famille"} className="zoneSlider" style={{ transform: `translateY(${250 * y1}px)` }}>
                         Famille
                     </Link>
-                    <Link to={"/photoclub" } className="zoneSlider start" style={{ transform: `translateY(${30 * y1}vh)` }}>
+                    <Link to={"/photoclub"} className="zoneSlider start" style={{ transform: `translateY(${250 * y1}px)` }}>
                         Photoclub
                     </Link>
-                    <Link to={"/animaux" } className="zoneSlider" style={{ transform: `translateY(${30 * y1}vh)` }}>
+                    <Link to={"/animaux"} className="zoneSlider" style={{ transform: `translateY(${250 * y1}px)` }}>
                         Animaux
                     </Link>
-                    <Link to={"/art" } className="zoneSlider" style={{ transform: `translateY(${30 * y1}vh)` }}>
+                    <Link to={"/art"} className="zoneSlider" style={{ transform: `translateY(${250 * y1}px)` }}>
                         Art
                     </Link>
-                    <Link to={"/avion" } className="zoneSlider" style={{ transform: `translateY(${30 * y1}vh)` }}>
+                    <Link to={"/avion"} className="zoneSlider" style={{ transform: `translateY(${250 * y1}px)` }}>
                         Aviation
                     </Link>
-                    <Link to={"/nature" } className="zoneSlider" style={{ transform: `translateY(${30 * y1}vh)` }}>
+                    <Link to={"/nature"} className="zoneSlider" style={{ transform: `translateY(${250 * y1}px)` }}>
                         Nature
                     </Link>
-                    <Link to={"/viesociale" } className="zoneSlider" style={{ transform: `translateY(${30 * y1}vh)` }}>
+                    <Link to={"/viesociale"} className="zoneSlider" style={{ transform: `translateY(${250 * y1}px)` }}>
                         Vie sociale
                     </Link>
-                    <Link to={"/voyages" } className="zoneSlider" style={{ transform: `translateY(${30 * y1}vh)` }}>
+                    <Link to={"/voyages"} className="zoneSlider" style={{ transform: `translateY(${250 * y1}px)` }}>
                         Voyages
                     </Link>
-                    <Link to={"/france" } className="zoneSlider" style={{ transform: `translateY(${30 * y1}vh)` }}>
+                    <Link to={"/france"} className="zoneSlider" style={{ transform: `translateY(${250 * y1}px)` }}>
                         France
                     </Link>
-                    <Link to={"/famille" } className="zoneSlider" style={{ transform: `translateY(${30 * y1}vh)` }}>
+                    <Link to={"/famille"} className="zoneSlider" style={{ transform: `translateY(${250 * y1}px)` }}>
                         Famille
                     </Link>
-                    <Link to={"/photoclub" } className="zoneSlider" style={{ transform: `translateY(${30 * y1}vh)` }}>
+                    <Link to={"/photoclub"} className="zoneSlider" style={{ transform: `translateY(${250 * y1}px)` }}>
                         Photoclub
                     </Link>
-                    <Link to={"/animaux" } className="zoneSlider" style={{ transform: `translateY(${30 * y1}vh)` }}>
+                    <Link to={"/animaux"} className="zoneSlider" style={{ transform: `translateY(${250 * y1}px)` }}>
                         Animaux
                     </Link>
-                    <Link to={"/art" } className="zoneSlider" style={{ transform: `translateY(${30 * y1}vh)` }}>
+                    <Link to={"/art"} className="zoneSlider" style={{ transform: `translateY(${250 * y1}px)` }}>
                         Art
                     </Link>
-                    <Link to={"/avion" } className="zoneSlider" style={{ transform: `translateY(${30 * y1}vh)` }}>
+                    <Link to={"/avion"} className="zoneSlider" style={{ transform: `translateY(${250 * y1}px)` }}>
                         Aviation
                     </Link>
-                    <Link to={"/nature" } className="zoneSlider" style={{ transform: `translateY(${30 * y1}vh)` }}>
+                    <Link to={"/nature"} className="zoneSlider" style={{ transform: `translateY(${250 * y1}px)` }}>
                         Nature
                     </Link>
-                    <Link to={"/viesociale" } className="zoneSlider" style={{ transform: `translateY(${30 * y1}vh)` }}>
+                    <Link to={"/viesociale"} className="zoneSlider" style={{ transform: `translateY(${250 * y1}px)` }}>
                         Vie sociale
                     </Link>
-                    <Link to={"/voyages" } className="zoneSlider" style={{ transform: `translateY(${30 * y1}vh)` }}>
+                    <Link to={"/voyages"} className="zoneSlider" style={{ transform: `translateY(${250 * y1}px)` }}>
                         Voyages
                     </Link>
-                    <Link to={"/france" } className="zoneSlider" style={{ transform: `translateY(${30 * y1}vh)` }}>
+                    <Link to={"/france"} className="zoneSlider" style={{ transform: `translateY(${250 * y1}px)` }}>
                         France
                     </Link>
-                    <Link to={"/famille" } className="zoneSlider" style={{ transform: `translateY(${30 * y1}vh)` }}>
+                    <Link to={"/famille"} className="zoneSlider" style={{ transform: `translateY(${250 * y1}px)` }}>
                         Famille
                     </Link>
                 </div>
@@ -187,15 +187,17 @@ function Slider() {
                 <button id="goBottom" onClick={() => goBottom()}></button>
 
                 <div id="dotsdiv" className="dotsdiv">
-                    { carousselDivIndex.map((item) => {
-                        return(
+                    {carousselDivIndex.map((item) => {
+                        return (
                             <div onClick={() => goIndex(item.index)} className={"dots " + item.name}></div>
                         );
-                    })}    
+                    })}
                 </div>
 
             </div>
-            <div className="parallax3"></div>
+            <div className="parallax31"></div>
+            <div className="parallax32"></div>
+            <div className="parallax4"></div>
         </div>
     );
 }

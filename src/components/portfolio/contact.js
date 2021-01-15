@@ -33,10 +33,9 @@ const Contact = () => {
 
   return (
     <div id="contact" className='perroquet'>
-      {/* <div className="parallax4"></div> */}
 
       <div className="contactPortfolio">
-        <h3 className="contactTitle">Contact</h3>
+        <h3 className="contactTitle title3">Contact</h3>
         <form id="contactform" spellCheck="false" onSubmit={sendEmail}>
           {/* <label for="name">Nom</label> */}
           <input className="contactInput" required type="text" id="name" name="name" placeholder="Nom" />
@@ -55,8 +54,8 @@ const Contact = () => {
                   data-action='submit'
                   className='contactcodeurs' type="submit" value="Send Message">Envoyer</button>
 
-          <p id="success" className="success">Message envoyé !</p>
-          <p id="failure" className="failure">Une erreur est survenue...</p>
+          <p id="success" className="success poppinsRegular">Message envoyé !</p>
+          <p id="failure" className="failure poppinsRegular">Une erreur est survenue...</p>
 
         </form>
 

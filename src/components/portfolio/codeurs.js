@@ -10,14 +10,14 @@ const Codeurs = () => {
   }
 
   return (
-    <div data-scroll-section className='codeurs'>
+    <div className='codeurs'>
     <div className='robin'>
-        <p>Design & frontend <br></br> Robin Bonhoure</p>
+        <p className="poppinsRegular">Design & frontend <br></br> Robin Bonhoure</p>
         <button onClick={() => contactRobin()} className='contactcodeurs'>Contacter</button>
     </div>
-        <h3>Créateurs du site</h3>
+        <h3 className="title3">Créateurs du site</h3>
     <div className='julien'>
-        <p>Frontend & Backend <br></br> Julien Rouzot</p>
+        <p className="poppinsRegular">Frontend & Backend <br></br> Julien Rouzot</p>
         <button onClick={() => contactJulien()} className='contactcodeurs'>Contacter</button>
     </div>
     

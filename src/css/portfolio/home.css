@@ -1,11 +1,7 @@
-/* .App {
-  position: relative;
-} */
-
 .accueil {
   position: relative;
   max-width: 100%;
-  height: 110vh;
+  height: 1000px;
   background: url(../../assets/images/imageaccueilpimp.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -17,14 +13,14 @@
   z-index: 2;
   position: absolute;
   width: 45%;
-  top: 30vh;
+  top: 280px;
   right: 5%;
   ;
 }
 
 @media (max-width: 1250px) {
   .accueil {
-    height: 90vh;
+    height: 850px;
     background-position: 30% bottom;
   }
   .logo {
@@ -34,7 +30,7 @@
 
 @media (max-width: 800px) {
   .accueil {
-    height: 70vh;
+    height: 680px;
     background-position: 30% bottom;
   }
   .logo {
@@ -50,11 +46,10 @@
     background-size: cover;
     max-width: 100%;
     height: 1000px;
-    /* background-attachment: fixed; */
     background-position: center center;
   }
   .logo {
-    top: 680px;
+    top: 750px;
     width: 70%;
     left: 15%;
   }

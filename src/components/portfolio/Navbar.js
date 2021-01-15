@@ -20,9 +20,9 @@ function Navbar() {
     <nav className={navbar ? 'navbar active' : 'navbar'} id='nav'>
       <ul className="menuComputer">
         <img className="focal menuComputer" src={focal} alt="logo charles moll"></img>
-        <li><a href="#slider">Portfolio</a></li>
-        <li><a href="#bio">Qui suis-je</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#slider" className="poppins18">Portfolio</a></li>
+        <li><a href="#bio" className="poppins18">Qui suis-je</a></li>
+        <li><a href="#contact" className="poppins18">Contact</a></li>
       </ul>
     </nav>
   )

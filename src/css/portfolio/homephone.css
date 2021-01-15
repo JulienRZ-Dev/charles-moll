@@ -241,7 +241,7 @@
             transform: scaleY(12)
         }
         100% {
-            transform: scaleY(590)
+            transform: scaleY(460)
         }
     }
     /* Pour ajuster le rectangle qui monte avec */
@@ -253,7 +253,7 @@
             transform: translateY(10px);
         }
         100% {
-            transform: translateY(120px);
+            transform: translateY(0px);
         }
     }
     /* MENU ANIMATIONS */

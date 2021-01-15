@@ -5,7 +5,7 @@ import logo from '../../assets/images/logo.png';
 const Home = () => {
 
     return (
-        <div data-scroll-section>
+        <div>
 
             <div className='accueil'>
                 <img className="logo" src={logo} alt="charles moll"></img>
@@ -39,7 +39,7 @@ const Home = () => {
                 </div>
             </div>
 
-            <div data-scroll data-scroll-speed="4" className="parallax1"></div>
+            <div className="parallax1"></div>
         </div>
     )
 }

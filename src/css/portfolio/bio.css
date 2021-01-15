@@ -1,14 +1,7 @@
-.bioOver {
-    width: 100%;
-    height: 150vh;
-    overflow: hidden;
-    margin-bottom: -40vh;
-}
-
 .bio {
     position: relative;
     max-width: 100%;
-    height: 120vh;
+    height: 900px;
     background: url(../../assets/images/fond1.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -31,20 +24,21 @@
     z-index: 3;
     position: absolute;
     left: 10%;
-    top: 50vh;
+    top: 350px;
     width: 600px;
     text-align: center;
 }
 
 @media (max-width: 1250px) {
     .bio {
-        height: 100vh;
+        height: 750px;
+        margin-bottom: 0px;
     }
     .textbio {
-        top: 30vh;
+        top: 270px;
     }
     .textbio .paragraphe {
-        font-size: 18px;
+        font-size: 17px;
     }
     .pepe {
         z-index: 2;
@@ -57,11 +51,11 @@
 
 @media (max-width: 1000px) {
     .bio {
-        height: 100vh;
+        height: 800px;
     }
     .textbio {
         width: 50%;
-        top: 30vh;
+        top: 270px;
         left: 5%;
     }
     .textbio .paragraphe {
@@ -80,7 +74,7 @@
 @media (max-width: 800px) {
     .textbio {
         width: 35%;
-        top: 25vh;
+        top: 250px;
         left: 8%;
     }
     .textbio .paragraphe {
@@ -89,16 +83,27 @@
     .pepe {
         z-index: 2;
         position: absolute;
-        width: 300px;
+        width: 350px;
         top: 120px;
         right: 1%;
+    }
+}
+
+@media (max-width: 600px) {
+    .textbio {
+        top: 200px;
+        left: 5%;
+    }
+    .pepe {
+        width: 320px;
+        top: 120px;
     }
 }
 
 @media (max-width: 500px) {
     .textbio {
         width: 45%;
-        top: 20vh;
+        top: 200px;
         left: 10%;
     }
     .textbio .paragraphe {
@@ -111,12 +116,25 @@
         top: 120px;
         right: -40%;
     }
+    .bioOver {
+        width: 100%;
+        height: 1500px;
+        overflow: hidden;
+        margin-bottom: -680px;
+    }
 }
 
 @media (max-width: 350px) {
     .textbio {
         width: 40%;
-        top: 10vh;
+        top: 150px;
         left: 7%;
+    }
+    .pepe {
+        z-index: 2;
+        position: absolute;
+        width: 300px;
+        top: 120px;
+        right: -45%;
     }
 }

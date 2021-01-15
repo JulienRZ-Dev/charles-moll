@@ -12,16 +12,16 @@ const Footer = () => {
   }
 
   return (
-    <div data-scroll-section className='footer'>
+    <div className='footer'>
       <div className="flexcontainer">
         <div className='menufooter'>
-          <h4 className="footertitle">Menu</h4>
-          <a href="#slider">Portfolio</a>
+          <h4 className="footertitle title4">Menu</h4>
+          <a href="#slider" className="poppins18">Portfolio</a>
 
-          <div className="compose">
+          <div className="compose poppins18">
             <div className="first">
               <a href="#">Animaux</a>
-              <a href="#">Famille</a>
+              <Link to={"/famille" }>Famille</Link>
               <a href="#">Art</a>
             </div>
             <div className="second">
@@ -36,14 +36,14 @@ const Footer = () => {
             </div>
           </div>
 
-          <a href="#bio">Qui suis-je</a>
-          <a href="#contact">Contact</a>
+          <a href="#bio" className="poppins18">Qui suis-je</a>
+          <a href="#contact" className="poppins18">Contact</a>
         </div>
         <div className='codeursfooter'>
           <h4 className="footertitle">Créateurs du site</h4>
-          <a>Frontend & backend <br></br> Julien Rouzot</a>
+          <a className="poppins18">Frontend & backend <br></br> Julien Rouzot</a>
           <button onClick={() => contactJulien()} className='contactcodeurs'>Contacter</button>
-          <a>Design & frontend <br></br> Robin Bonhoure</a>
+          <a className="poppins18">Design & frontend <br></br> Robin Bonhoure</a>
           <button onClick={() => contactRobin()} className='contactcodeurs'>Contacter</button>
         </div>
         <div className='logofooter'>
