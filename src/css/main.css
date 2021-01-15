@@ -1,0 +1,184 @@
+:root {
+    --primary: #EB8383;
+    --secondary-background: #6B6B6B;
+    --secondary-backgroung-light: #C4C4C4;
+    --action: linear-gradient(270deg, #359EFF 0%, #9789ED 83.33%);
+    --action-primary: linear-gradient(90deg, #EB8383 0%, #EBBB83 100%);
+    --link: rgb(91, 120, 221);
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url(../assets/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Poppins-light";
+    src: url(../assets/fonts/Poppins-Light.ttf);
+}
+
+@font-face {
+    font-family: "Poppins-extralight";
+    src: url(../assets/fonts/Poppins-ExtraLight.ttf);
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+.html-not-scrollable {
+    overflow: hidden;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.body-not-scrollable {
+    overflow: hidden;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+hr {
+    width: 10rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.paragraph {
+    margin: 0;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.subtitle {
+    margin: 0;
+    font-size: 1.4rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.poppinsRegular {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.title { 
+    margin: 0;
+    font-size: 3.6rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.titleLetterSpaced {
+    margin: 0;
+    font-size: 6rem;
+    letter-spacing: .3rem;
+    font-family: 'Poppins-light', sans-serif; 
+}
+
+.titleBig {
+    margin: 0;
+    font-size: 6rem;
+    font-family: 'Poppins', sans-serif;   
+}
+
+.white {
+    color: white;
+}
+
+.black {
+    color: black;
+}
+
+.input {
+    -webkit-box-shadow: 2px 2px 4px 0px #000000; 
+    box-shadow: 2px 2px 4px 0px #000000;
+    border: var(--primary) solid 1px;
+    height: 2rem;
+    padding: .2rem;
+}
+
+.textarea {
+    -webkit-box-shadow: 2px 2px 4px 0px #000000; 
+    box-shadow: 2px 2px 4px 0px #000000;
+    border: var(--primary) solid 1px;
+    height: 6rem;
+}
+
+.link {
+    margin: 0;
+    width: fit-content;
+    font-family: 'Poppins', sans-serif;
+    color: var(--link);
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.link:hover {
+    transform: scale(1.05);
+}
+
+.messageContainer {
+    padding: 2rem;
+}
+
+.successMessage {
+    margin: 0.4rem;
+    font-family: 'Poppins', sans-serif;
+    color: green;
+}
+
+.failureMessage {
+    margin: 0.4rem;
+    font-family: 'Poppins', sans-serif;
+    color: red;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--secondary-background);
+    width: 100%;
+    padding: 3% 0 3% 0;
+
+    margin-bottom: 2rem;
+}
+
+
+/* REGULAR PHONES */
+@media (min-width: 320px) and (max-width: 766px) {
+    .title {
+        font-size: 1.6rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* XS PHONES */
+@media (max-width: 320px) {
+    .title {
+        font-size: 1.4rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .paragraph {
+        font-size: 0.8rem;
+    }   
+}

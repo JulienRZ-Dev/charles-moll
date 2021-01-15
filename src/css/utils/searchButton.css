@@ -1,0 +1,31 @@
+.searchButton {
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    margin: 1rem;
+    width: 20rem;
+
+    justify-content: space-between;
+}
+
+.searchIcon {
+    width: 1.6rem;
+}
+
+.whiteSpace {
+    width: 1.6rem;
+}
+
+
+
+/* REGULAR PHONES */
+@media (min-width: 320px) and (max-width: 766px) {
+    .searchButton {
+        width: 14rem;
+    }
+}
+
+/* XS PHONES */
+@media (max-width: 320px) {
+    .searchButton {
+        width: 12rem;
+    }
+}

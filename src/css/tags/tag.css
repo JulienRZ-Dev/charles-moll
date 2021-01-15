@@ -1,0 +1,42 @@
+#tagsContainer {
+    width: 100%;
+    max-width: 70rem;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.tagSectionContainer {
+    width: 100%;
+}
+
+.tagContainer {
+    max-width: 68rem;
+    margin: 0rem 1rem 1rem 1rem;
+    background-color: var(--secondary-backgroung-light);
+    border-radius: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    flex-shrink: 0;
+}
+
+.tagContent {
+    margin: .5rem 0rem .5rem 0rem;
+}
+
+.tagContainerSelected {
+    background-color: var(--primary);
+}
+
+
+
+/* REGULAR AND XS PHONES */
+@media (max-width: 766px) {
+    #tagsContainer {
+        flex-direction: column;
+    }
+}

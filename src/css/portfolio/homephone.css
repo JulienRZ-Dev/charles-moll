@@ -1,0 +1,349 @@
+@media (max-width: 500px) {
+    /* ANIMATIONS */
+    .animation {
+        transform: scale(1.25);
+        position: relative;
+        top: -620px;
+        left: -65px;
+    }
+
+    /* MENU */
+    #menu {
+        top: -150px;
+        overflow: hidden;
+    }
+
+    /* OBJECTS TO ANIMATE */
+    .focalone {
+        animation: one 2s ease-in-out;
+    }
+    .focaltwo {
+        animation: two 2s ease-in-out;
+    }
+    .focalthree {
+        animation: three 2s ease-in-out;
+    }
+    .focalfour {
+        animation: four 2s ease-in-out;
+    }
+    .focalfive {
+        animation: five 2s ease-in-out;
+    }
+    .focalsix {
+        animation: six 2s ease-in-out;
+    }
+    svg.rotation {
+        transform-origin: center;
+        animation: rotation 2s ease-in-out forwards;
+    }
+    .translation {
+        position: absolute;
+        left: 50%;
+        animation: translation 2s ease-in-out forwards;
+    }
+    .circle {
+        position: absolute;
+        left: 50%;
+        width: 120px;
+        height: 120px;
+        z-index: 0;
+        animation: growing 2s ease-in-out forwards;
+    }
+    .top, .bot, .center {
+        background: black;
+        position: absolute;
+        top: 55px;
+        right: 10px;
+        left: 0;
+    }
+    .bot, .top {
+        height: 60px;
+    }
+    .bot {
+        border-radius: 0 0 60px 60px;
+    }
+    .top {
+        border-radius: 60px 60px 0 0;
+    }
+    .center {
+        bottom: 0px;
+        height: 1px;
+    }
+    .top {
+        transform: translateY(80px);
+    }
+    .center {
+        transform-origin: bottom;
+        animation: center-animate 2s ease-in-out forwards;
+    }
+    .top {
+        animation: top-animate 2s ease-in-out forwards;
+    }
+    .ajust {
+        animation: ajustement 2s ease-in-out forwards;
+    }
+    /* MENU */
+    .menu {
+        text-align: center;
+        color: white;
+        line-height: 70px;
+        position: absolute;
+        left: 50%;
+        padding-left: 15px;
+        top: -130px;
+    }
+    .item1 {
+        font-size: 15px;
+        animation: slide 1s ease-in-out 1.5s both;
+    }
+    .item2 {
+        font-size: 15px;
+        animation: slide 1s ease-in-out 1.75s both;
+    }
+    .item3 {
+        font-size: 15px;
+        animation: slide 1s ease-in-out 2s both;
+    }
+    /* ANIMATIONS */
+    @keyframes one {
+        0% {
+            transform: translate(0px, 0px);
+        }
+        20% {
+            transform: translate(4px, -6.9282px);
+        }
+        80% {
+            transform: translate(4px, -6.9282px);
+        }
+        100% {
+            transform: translate(0px, 0px);
+        }
+    }
+    @keyframes two {
+        0% {
+            transform: translateX(0px, 0px);
+        }
+        20% {
+            transform: translateX(8px);
+        }
+        80% {
+            transform: translateX(8px);
+        }
+        100% {
+            transform: translateX(0px, 0px);
+        }
+    }
+    @keyframes three {
+        0% {
+            transform: translate(0px, 0px);
+        }
+        20% {
+            transform: translate(-4px, -6.9282px);
+        }
+        80% {
+            transform: translate(-4px, -6.9282px);
+        }
+        100% {
+            transform: translate(0px, 0px);
+        }
+    }
+    @keyframes four {
+        0% {
+            transform: translate(0px, 0px);
+        }
+        20% {
+            transform: translate(4px, 6.9282px);
+        }
+        80% {
+            transform: translate(4px, 6.9282px);
+        }
+        100% {
+            transform: translate(0px, 0px);
+        }
+    }
+    @keyframes five {
+        0% {
+            transform: translate(0px, 0px);
+        }
+        20% {
+            transform: translate(-4px, 6.9282px);
+        }
+        80% {
+            transform: translate(-4px, 6.9282px);
+        }
+        100% {
+            transform: translate(0px, 0px);
+        }
+    }
+    @keyframes six {
+        0% {
+            transform: translateX(0px);
+        }
+        20% {
+            transform: translateX(-8px);
+        }
+        80% {
+            transform: translateX(-8px);
+        }
+        100% {
+            transform: translateX(0px, 0px);
+        }
+    }
+    @keyframes rotation {
+        from {
+            transform: rotateZ(0deg);
+        }
+        to {
+            transform: rotateZ(180deg);
+        }
+    }
+    @keyframes translation {
+        0% {
+            transform: translateY(0px);
+        }
+        20% {
+            transform: translateY(0px);
+        }
+        85% {
+            transform: translateY(-300px);
+        }
+        100% {
+            transform: translateY(-300px);
+        }
+    }
+    @keyframes growing {
+        0% {
+            transform: scale(0.8);
+        }
+        20% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+    @keyframes top-animate {
+        0% {
+            transform: translateY(-60px)
+        }
+        20% {
+            transform: translateY(-60px)
+        }
+        100% {
+            transform: translateY(-510px)
+        }
+    }
+    @keyframes center-animate {
+        0% {
+            transform: scaleY(2)
+        }
+        20% {
+            transform: scaleY(12)
+        }
+        100% {
+            transform: scaleY(590)
+        }
+    }
+    /* Pour ajuster le rectangle qui monte avec */
+    @keyframes ajustement {
+        0% {
+            transform: translateY(0);
+        }
+        20% {
+            transform: translateY(10px);
+        }
+        100% {
+            transform: translateY(120px);
+        }
+    }
+    /* MENU ANIMATIONS */
+    @keyframes slide {
+        0% {
+            transform: translateX(-100px);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+}
+
+@media (min-width: 501px) {
+    /* ANIMATIONS */
+    .animation {
+        visibility: hidden;
+    }
+
+    /* MENU */
+    #menu {
+        visibility: hidden;
+    }
+
+    /* OBJECTS TO ANIMATE */
+    .focalone {
+        visibility: hidden;
+    }
+    .focaltwo {
+        visibility: hidden;
+    }
+    .focalthree {
+        visibility: hidden;
+    }
+    .focalfour {
+        visibility: hidden;
+    }
+    .focalfive {
+        visibility: hidden;
+    }
+    .focalsix {
+        visibility: hidden;
+    }
+    svg.rotation {
+        visibility: hidden;
+    }
+    .translation {
+        visibility: hidden;
+    }
+    .circle {
+        visibility: hidden;
+    }
+    .top, .bot, .center {
+        visibility: hidden;
+    }
+    .bot, .top {
+        visibility: hidden;
+    }
+    .bot {
+        visibility: hidden;
+    }
+    .top {
+        visibility: hidden;
+    }
+    .center {
+        visibility: hidden;
+    }
+    .top {
+        visibility: hidden;
+    }
+    .center {
+        visibility: hidden;
+    }
+    .top {
+        visibility: hidden;
+    }
+    .ajust {
+        visibility: hidden;
+    }
+    /* MENU */
+    .menu {
+        visibility: hidden;
+    }
+    .item1 {
+        visibility: hidden;
+    }
+    .item2 {
+        visibility: hidden;
+    }
+    .item3 {
+        visibility: hidden;
+    }
+}

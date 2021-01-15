@@ -1,0 +1,11 @@
+#albumNavContainer {
+    margin: 2% 10% 2% 10%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#mainTag {
+    width: calc(100% - 2rem);
+}

@@ -1,0 +1,41 @@
+#modalExt {
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.8);
+    filter: blur(0.5);
+
+    overflow-y: scroll;
+}
+
+#modalInt {
+    z-index: 4;
+    margin: 3rem 8rem 3rem 8rem;
+}
+
+#modalClear {
+    position: fixed;
+    z-index: 5;
+    top: 2rem;
+    right: 3rem;
+    color: white;
+    height: 4rem;
+    width: 4rem;
+    cursor: pointer;
+}
+
+
+/* TABLET AND PHONES */
+@media (max-width: 1026px) {
+    #modalInt {
+        margin: 8rem 2rem 8rem 2rem;
+    } 
+    
+    #modalClear {
+        top: 2rem;
+        right: 2rem;
+    }
+}

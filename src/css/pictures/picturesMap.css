@@ -1,0 +1,33 @@
+#picturesMapContainer {
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#picturesContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+
+    padding: 2rem;
+}
+
+.endOfPicturesMessage {
+    text-align: center;
+}
+
+/* TABLET */
+@media (min-width: 766px) and (max-width: 1026px) {
+    #picturesContainer {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* SMALL AND REGULAR PHONES */
+@media (max-width: 766px) {
+    #picturesContainer {
+        grid-template-columns: 1fr;
+    }
+}

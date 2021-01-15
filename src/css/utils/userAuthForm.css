@@ -1,0 +1,45 @@
+.userAuthForm {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: white .2rem solid;
+    border-radius: 4rem;
+
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.userAuthFormTitle {
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 2rem;
+}
+
+.userAuthFormButton {
+    background: var(--action-primary);
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+
+/* TABLETS */
+@media (min-width: 766px) and (max-width: 1026px) {
+    .userAuthForm {
+        width: 30rem;
+        height: 20rem;
+    }
+}
+
+/* PHONES AND TABLETS */
+@media (max-width: 766px) {
+    .userAuthForm {
+        margin: 2rem;
+    }
+
+    .userAuthFormTitle {
+        font-size: 2rem;
+    }
+}
+

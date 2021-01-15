@@ -1,0 +1,48 @@
+.albumHeader {
+    position: relative;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.albumHeaderPicture {
+    position: absolute;
+    object-fit: cover;
+    object-position: bottom;
+    height: 50vh;
+    width: 100%;
+    z-index: -1;
+}
+
+.exportIcons {
+    display: flex;
+
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+}
+
+.albumHeaderExportIcon {
+    cursor: pointer;
+    height: 4rem;
+    width: 4rem;
+    margin-right: 2rem;
+    transition: all .2s ease-in-out;
+}
+
+.albumHeaderExportIcon:hover {
+    transform: scale(1.1);
+}
+
+
+/* TABLET AND PHONES */
+@media (max-width: 1026px) {
+    .albumHeader {
+        height: 40vh;
+    }
+
+    .albumHeaderPicture {
+        height: 40vh;
+    }
+}

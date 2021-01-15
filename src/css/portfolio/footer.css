@@ -1,0 +1,156 @@
+.footer {
+  z-index: 0;
+  margin-top: -270px;
+  position: relative;
+  max-width: 100%;
+  height: 700px;
+  background: url(../../assets/images/footer.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: 0;
+  background-position: bottom;
+}
+
+.flexcontainer {
+  max-width: 100%;
+  width: 100%;
+  position: absolute;
+  top: 20vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.menufooter {
+  width: 400px;
+  margin: 30px;
+  flex-direction: column;
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.menufooter a {
+  margin: 15px;
+  text-decoration: none;
+}
+
+.codeursfooter {
+  width: auto;
+  margin: 30px;
+  flex-direction: column;
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.codeursfooter a {
+  margin: 40px 0 10px 0;
+}
+
+.logofooter {
+  width: 400px;
+  margin: 30px;
+  flex-direction: column;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.logofooter img {
+  width: 100%;
+}
+
+.footertitle {
+  margin-bottom: 50px;
+}
+
+.codeursfooter a {
+  text-align: center;
+}
+
+.compose {
+  display: flex;
+  flex-direction: row;
+  width:100% ;
+}
+
+.first {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.first a {
+  margin: 10px;
+  text-align: center;
+}
+
+.second {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.second a {
+  margin: 10px;
+  text-align: center;
+}
+
+.third {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.third a {
+  margin: 10px;
+  text-align: center;
+}
+
+/* @media (max-width: 1350px) {
+  .footer{
+    height: 110vh;
+  }
+} */
+
+
+@media (max-width: 1100px) {
+  .footer{
+    margin-top: -300px;
+    height: 1000px;
+  }
+  .flexcontainer {
+    top: 200px;
+    flex-wrap: wrap;
+  }
+  .menufooter{
+    width: 40%;
+  }
+  .codeursfooter{
+    width: 40%;
+  }
+}
+
+@media (max-width: 650px) {
+  .footer{
+    background: #19273f;
+    margin-top: -400px;
+    height: 1650px;
+  }
+  .flexcontainer {
+    top: 350px;
+    flex-wrap: wrap;
+  }
+  .menufooter{
+    width: 100%;
+  }
+  .codeursfooter{
+    width: 100%;
+  }
+}

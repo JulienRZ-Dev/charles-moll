@@ -1,0 +1,27 @@
+#authForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    height: calc(100vh - 6rem);
+    margin: auto;
+}
+
+.authTitle {
+    margin: 4rem;
+    margin-bottom: 8rem;
+    font-size: 3rem;
+}
+
+.authButton {
+    width: 30%;
+    margin: 2%;
+}
+
+.signOutButton {
+    background: var(--action-primary);
+}
+
+#authMessageContainer {
+    padding: 1rem;
+}

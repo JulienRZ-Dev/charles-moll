@@ -1,0 +1,21 @@
+.subTagsContainer {
+    max-height: 16rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-bottom: 2rem;
+}
+
+.subTagContainer {
+    padding: .5rem 1rem .5rem 1rem;
+    margin: 0rem 2.6rem 1rem 1rem;
+    background-color: var(--secondary-backgroung-light);
+    border-radius: 2rem;
+
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.subTagContainerSelected {
+    background-color: var(--primary);
+}

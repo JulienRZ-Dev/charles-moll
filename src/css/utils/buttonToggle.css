@@ -1,0 +1,12 @@
+.buttonToggle {
+    background: var(--secondary-backgroung-light);
+}
+
+.buttonSelected {
+    background: var(--primary);
+}
+
+.buttonSelected:hover {
+    filter: brightness(1);
+    cursor: auto;
+}

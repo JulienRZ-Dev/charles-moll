@@ -1,0 +1,21 @@
+.previewContainer {
+    height: 150px;
+    width: 200px;
+    background-color: #C4C4C4;
+    background-image: url("../../assets/icons/addPicture.png");
+    background-position: center;
+    background-size: auto; 
+    background-repeat: no-repeat;
+}
+
+.inputImagePreview {
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+.imagePreviewDeleteIcon {
+    cursor: pointer;
+    width: 2rem;
+}

@@ -1,0 +1,120 @@
+.parallax1 {
+  top: 150px;
+  position: absolute;
+  z-index: -1;
+  max-width: 100%;
+  width: 100%;
+  height: 110vh;
+  background: url(../../assets/images/parallax1.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.parallax2 {
+  top: -300px;
+  position: absolute;
+  z-index: -1;
+  max-width: 100%;
+  width: 100%;
+  height: 125vh;
+  background: url(../../assets/images/parallax2.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+.parallax3 {
+  top: 280vh;
+  position: absolute;
+  z-index: -1;
+  max-width: 100%;
+  width: 100%;
+  height: 132vh;
+  background: url(../../assets/images/parallax3.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.parallax4 {
+  position: absolute;
+  z-index: -1;
+  max-width: 100%;
+  width: 100%;
+  height: 130vh;
+  background: url(../../assets/images/parallax4.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 80vh;
+  background-position: top bottom;
+}
+
+@media (max-width: 1250px) {
+  .parallax1 {
+    height: 90vh;
+    background-position: 70% bottom;
+  }
+  .parallax2 {
+    top: 133vh;
+    height: 105vh;
+  }
+  .parallax3 {
+    top: 255vh;
+    height: 112vh;
+  }
+}
+
+@media (max-width: 1100px) {
+  .parallax4{
+    bottom: 130vh;
+  }
+}
+
+@media (max-width: 1030px) {
+  .parallax2 {
+    top: 145vh;
+    height: 105vh;
+  }
+}
+
+@media (max-width: 800px) {
+  .parallax1 {
+    height: 70vh;
+    background-position: 70% bottom;
+  }
+  .parallax2 {
+    top: 125vh;
+    height: 85vh;
+  }
+  .parallax3 {
+    top: 255vh;
+    height: 112vh;
+  }
+}
+
+@media (max-width: 650px) {
+  .parallax4{
+    bottom: 225vh;
+  }
+}
+
+@media (max-width: 500px) {
+  .parallax1 {
+    top: 70vh;
+    height: 70vh;
+    background-position: 70% bottom;
+    visibility: hidden;
+  }
+  .parallax2 {
+    top: 225vh;
+    height: 85vh;
+    visibility: hidden;
+  }
+  .parallax3 {
+    visibility: hidden;
+  }
+  .paralla4 {
+    visibility: hidden;
+  }
+}

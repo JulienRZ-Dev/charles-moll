@@ -1,0 +1,27 @@
+.albumMainNav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+
+    max-width: 90%;
+}
+
+.albumNavMenuButton {
+    min-width: 16rem;
+}
+
+
+/* SMALL AND REGULAR PHONES */
+@media (max-width: 766px) {
+    .albumMainNav {
+        flex-direction: column;
+    }
+
+    .albumNavMenuButton {
+        min-width: 14rem;
+        margin-bottom: 2rem;
+    }
+}

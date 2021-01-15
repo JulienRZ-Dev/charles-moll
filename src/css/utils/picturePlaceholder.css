@@ -1,0 +1,22 @@
+.picturePlaceholder {
+    animation: blink 2s infinite;
+}
+
+.picturePlaceholderBig {
+    margin-top: 20%;
+    animation: blink 2s infinite;
+}
+
+@keyframes blink {
+    from {
+        filter: brightness(1);
+    }
+
+    50% {
+        filter: brightness(0.7);
+    }
+
+    to {
+        filter: brightness(1);
+    }
+}

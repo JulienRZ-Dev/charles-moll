@@ -1,0 +1,33 @@
+.button {
+    border: none;
+    outline: none;
+
+    padding: 1rem 3rem 1rem 3rem;
+    background: var(--action);
+    border-radius: 4rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.button:hover {
+    filter: brightness(1.1);
+}
+
+.action {
+    background: var(--action);
+}
+
+.primary {
+    background-color: var(--primary);
+}
+
+
+/* SMALL AND REGULAR PHONES */
+@media (max-width: 768px) {
+    .button {
+        padding: .7rem 2.6rem .7rem 2.6rem;
+    }
+}

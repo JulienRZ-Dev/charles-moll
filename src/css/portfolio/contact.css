@@ -1,0 +1,146 @@
+.perroquet {
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 900px;
+  background: url(../../assets/images/contact.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 20vh;
+  margin-bottom: 20vh;
+  background-position: 60%;
+}
+
+/* CONTACT */
+
+.success, .failure{
+  text-align: center;
+  visibility: hidden;
+}
+
+.success{
+  position: relative;
+  top: 20px;
+  color: rgb(77, 189, 77);
+}
+
+.failure{
+  color: rgb(255, 57, 57);
+}
+
+textarea, .contactInput {
+  outline: none;
+}
+
+#contactform {
+  padding: 20px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+}
+
+.contactInput, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-bottom: 1px solid white;
+  box-sizing: border-box;
+  margin-top: 0px;
+  margin-bottom: 16px;
+  resize: vertical;
+  background-color: transparent;
+  font-size: 15px;
+}
+
+textarea {
+  height: 200px;
+  resize: none;
+}
+
+.contactPortfolio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  z-index: 3;
+  position: relative;
+  left: 15%;
+  border-radius: 40px;
+  width: 450px;
+  height: 550px;
+  background: rgba(0, 0, 0, 0.47);
+  padding: 20px;
+}
+
+.contactPortfolio .contactTitle, .contactInput, textarea, ::placeholder {
+  color: white;
+}
+
+.contactPortfolio ::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.contactPortfolio .contactTitle {
+  margin-top: 15px;
+  text-align: center;
+}
+
+button[type=submit] {
+  text-align: center;
+}
+
+.contactPortfolio .contactInput:focus {
+  padding: 9px 0px 9px 0px;
+  transition: padding 0.5s;
+}
+
+.contactPortfolio textarea:focus {
+  padding: 9px 0px 9px 0px;
+  transition: padding 0.5s;
+}
+
+.contactInput:-webkit-autofill, .contactInput:-webkit-autofill:hover, .contactInput:-webkit-autofill:focus, textarea:-webkit-autofill, textarea:-webkit-autofill:hover, textarea:-webkit-autofill:focus, select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:focus {
+  border: 0px solid black;
+  border-bottom: 1px solid white;
+  -webkit-text-fill-color: white;
+  box-shadow: 0 0 0px 1000px transparent inset;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.contactInput:focus, textarea:focus {
+  border: 0px;
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(to right, #0051EF, #90DEFF 100%);
+  border-image-slice: 1;
+}
+
+
+@media (max-width: 1000px) {
+  .contactPortfolio {
+    left: 12%;
+    width: 70%;
+  }
+}
+
+@media (max-width: 500px) {
+  form {
+    padding: 5px;
+  }
+  .contactPortfolio {
+    left: 6%;
+    width: 80%;
+  }
+}
+
+@media (max-width: 400px) {
+  .contactPortfolio {
+    left: 4.5%;
+    width: 80%;
+  }
+}

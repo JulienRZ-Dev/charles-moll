@@ -1,0 +1,40 @@
+#newTagForm {
+    display: grid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: white;
+}
+
+#newTag {
+    width: 20rem;
+    margin: 1rem;
+}
+
+#newTagParent {
+    width: 80%;
+    margin: 1rem;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.checkboxAndLabel {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.checkboxAndLabel > input {
+    margin-right: 1rem;
+}
+
+.tagFormButton {
+    width: 14rem;
+    margin: 1rem;
+}
+
+#newTagMessage {
+    margin-bottom: 1rem;
+}

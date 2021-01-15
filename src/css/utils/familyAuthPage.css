@@ -1,0 +1,70 @@
+.familyAuthPageContainer {
+    height: 100vh;
+    width: 100vw;
+
+    position: relative;
+    background-image: url("../../assets/images/familyBig.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.familyTitle {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+}
+
+.userAuthForm {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+}
+
+
+/* TABLETS */
+@media (min-width: 766px) and (max-width: 1026px) {
+    .familyAuthPageContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    .familyTitle {
+        position: relative;
+        font-size: 6rem;
+        top: 0;
+        right: 0;
+        text-align: center;
+    }
+    
+    .userAuthForm {
+        position: relative;
+        bottom: 0;
+        right: 0;
+    }
+}
+
+/* PHONES */
+@media (max-width: 766px) {
+    .familyAuthPageContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    .familyTitle {
+        position: relative;
+        font-size: 2.6rem;
+        text-align: center;
+        top: 0;
+        right: 0;
+    }
+    
+    .userAuthForm {
+        position: relative;
+        bottom: 0;
+        right: 0;
+    }
+}

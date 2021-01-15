@@ -1,0 +1,33 @@
+.addButton {
+    position: relative;
+    height: 4rem;
+    margin: 2rem;
+    cursor: pointer;
+    transition: all .3 ease-in-out;
+}
+
+.ext, .int {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .3 ease-in-out;
+}
+
+.ext {
+    height: 4rem;
+    transition: all .5s ease-in-out;
+}
+
+.int {
+    height: 2rem;
+    transition: all .2s ease-in-out;
+}
+
+.addButton:hover > .ext {
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+.addButton:hover > .int {
+    transform: translate(-50%, -50%) scale(1.1);
+}
