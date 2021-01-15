@@ -9,7 +9,7 @@ const Bio = () => {
         <div className="parallax21"></div>
         <div className="parallax22"></div>
         <div className="textbio">
-          <p className="paragraphe">“ Des photos comme des traces de vie, de rencontres, de culture. Seuls les souvenirs restents vivants. Est-ce vrai pour les photos ? “ <br></br><br></br>Bonne visite <br></br><br></br>Charles Moll</p>
+          <p className="poppinsRegular">“ Des photos comme des traces de vie, de rencontres, de culture. Seuls les souvenirs restents vivants. Est-ce vrai pour les photos ? “ <br></br><br></br>Bonne visite <br></br><br></br>Charles Moll</p>
         </div>
         <img className="pepe" src={pepe} alt="charles moll"></img>
       </div>

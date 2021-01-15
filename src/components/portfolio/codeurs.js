@@ -12,12 +12,12 @@ const Codeurs = () => {
   return (
     <div className='codeurs'>
     <div className='robin'>
-        <p className="poppinsRegular">Design & frontend <br></br> Robin Bonhoure</p>
+        <p className="poppinsRegular black">Design & frontend <br></br> Robin Bonhoure</p>
         <button onClick={() => contactRobin()} className='contactcodeurs'>Contacter</button>
     </div>
         <h3 className="title3">Créateurs du site</h3>
     <div className='julien'>
-        <p className="poppinsRegular">Frontend & Backend <br></br> Julien Rouzot</p>
+        <p className="poppinsRegular black">Frontend & Backend <br></br> Julien Rouzot</p>
         <button onClick={() => contactJulien()} className='contactcodeurs'>Contacter</button>
     </div>
     

@@ -91,6 +91,10 @@ a {
     font-family: 'Poppins', sans-serif;   
 }
 
+.black {
+    color: #000000;
+}
+
 .white {
     color: white;
 }

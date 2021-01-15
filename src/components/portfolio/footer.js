@@ -1,8 +1,10 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 import logo from '../../assets/images/logo.png';
 
-const Footer = () => {
+const Footer = (props) => {
 
   function contactJulien() {
     window.location.href = "mailto:rz.web.development@gmail.com";
@@ -12,7 +14,7 @@ const Footer = () => {
   }
 
   return (
-    <div className='footer'>
+    <div className={props.shouldHaveMargin ? 'footer' : 'footer footerWhitoutMargin'}>
       <div className="flexcontainer">
         <div className='menufooter'>
           <h4 className="footertitle title4">Menu</h4>
@@ -40,7 +42,7 @@ const Footer = () => {
           <a href="#contact" className="poppins18">Contact</a>
         </div>
         <div className='codeursfooter'>
-          <h4 className="footertitle">Créateurs du site</h4>
+          <h4 className="footertitle title4">Créateurs du site</h4>
           <a className="poppins18">Frontend & backend <br></br> Julien Rouzot</a>
           <button onClick={() => contactJulien()} className='contactcodeurs'>Contacter</button>
           <a className="poppins18">Design & frontend <br></br> Robin Bonhoure</a>

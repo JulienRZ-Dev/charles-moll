@@ -20,7 +20,7 @@ class Portfolio extends Component {
                 <Bio />
                 <Slider />
                 <Contact />
-                <Footer />
+                <Footer shouldHaveMargin={true} />
             </div>
         );
     }

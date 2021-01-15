@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom';
 import App from './App';
 
 // CSS
+import './css/portfolio/textPortfolio.css';
 import './css/main.css';
+
 
 import './css/portfolio/bio.css';
 import './css/portfolio/codeurs.css';
@@ -11,7 +13,6 @@ import './css/portfolio/contact.css';
 import './css/portfolio/footer.css';
 import './css/portfolio/home.css';
 import './css/portfolio/homephone.css';
-import './css/portfolio/locomotive-scroll.css';
 import './css/portfolio/nav.css';
 import './css/portfolio/parallax.css';
 import './css/portfolio/slider.css';

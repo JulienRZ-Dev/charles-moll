@@ -11,6 +11,11 @@
   background-position: bottom;
 }
 
+.footerWhitoutMargin {
+  margin-top: 0;
+}
+
+
 .flexcontainer {
   max-width: 100%;
   width: 100%;

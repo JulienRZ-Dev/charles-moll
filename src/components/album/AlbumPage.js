@@ -10,6 +10,7 @@ import ExportForm from '../utils/ExportForm';
 import ExportTagForm from '../utils/ExportTagForm';
 import AlbumNav from './AlbumNav';
 import AlbumZones from './AlbumZones';
+import Footer from '../portfolio/footer';
 
 import placeholder from '../../assets/images/flagplaceholder.png'; 
 import exportIcon from '../../assets/icons/exportIcon.png';
@@ -24,6 +25,7 @@ import { AuthContext } from '../../contexts/AuthContext';
 import { UserAuthContext } from '../../contexts/UserAuthContext';
 
 import { Redirect } from 'react-router-dom';
+
 
 function AlbumPage(props) {
 
@@ -124,7 +126,7 @@ function AlbumPage(props) {
                     <Redirect to="/authentification" /> :
                     <div id="albumContainer">
                         <header className="albumHeader">
-                            <h1 className="albumTitle titleLetterSpaced white">{props.zone}</h1>
+                            <h1 className="albumHeaderTitle titleLetterSpaced white">{props.zone}</h1>
                             <img
                                 className="albumHeaderPicture"
                                 onLoad={() => setHeaderLoaded(true)}
@@ -209,6 +211,8 @@ function AlbumPage(props) {
                             </Modal>
 
                         </LikesContext.Provider>
+
+                        <Footer shouldHaveMargin={false} />
                     </div>
             }
         </div>
