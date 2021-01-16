@@ -39,8 +39,8 @@ const Footer = (props) => {
             </div>
           </div>
 
-          <a href="#bio" className="poppins18">Qui suis-je</a>
-          <a href="#contact" className="poppins18">Contact</a>
+          <HashLink className="poppins18" to={"/#bio"}>Qui suis-je</HashLink>
+          <HashLink className="poppins18" to={"/#contact"}>Contact</HashLink>
         </div>
         <div className='codeursfooter'>
           <h4 className="footertitle title4">Créateurs du site</h4>

@@ -2,10 +2,18 @@ import React from 'react';
 
 import logo from '../../assets/images/logo.png';
 
+import Scrollbar from "smooth-scrollbar";
+
+var options = {
+    'damping': 0.1,
+}
+
+// Scrollbar.init(document.querySelector('#my-scrollbar'), options);
+
 const Home = () => {
 
     return (
-        <div>
+        <div id="my-scrollbar">
 
             <div className='accueil'>
                 <img className="logo" src={logo} alt="charles moll"></img>

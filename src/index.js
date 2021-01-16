@@ -16,6 +16,7 @@ import './css/portfolio/homephone.css';
 import './css/portfolio/nav.css';
 import './css/portfolio/parallax.css';
 import './css/portfolio/slider.css';
+import './css/portfolio/scrollBar.css';
 
 import './css/utils/addButton.css';
 import './css/utils/imagePreview.css';
