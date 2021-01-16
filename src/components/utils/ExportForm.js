@@ -210,13 +210,14 @@ function ExportForm() {
                 <select className="input zoneInput" name="zone" required onChange={(e) => updateZoneAndGetChildren(e)}>
                     <option defaultValue={zone === null ? true : false} value="">--Choisir--</option>
                     <option value="Nature">NATURE</option>
+                    <option value="Photoclub">PHOTOCLUB</option>
                     <option value="Vie Sociale">VIE SOCIALE</option>
                     <option value="Famille">FAMILLE</option>
                     <option value="Voyages">VOYAGES</option>
                     <option value="Animaux">ANIMAUX</option>
                     <option value="Art et Culture">ART ET CULTURE</option>
                     <option value="France">FRANCE</option>
-                    <option value="Avion">AVION</option>
+                    <option value="Aviation">AVIATION</option>
                 </select>
 
 

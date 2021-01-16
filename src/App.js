@@ -77,7 +77,7 @@ function App() {
   const zones = [
     { name: "Animaux", link: "animaux", picture: width > 700 ? width > 1100 ? width > 1700 ? animauxBig : animaux : animauxIpad : animauxPhone },
     { name: "Art et Culture", link: "art", picture: width > 700 ? width > 1100 ? width > 1700 ? artBig : art : artIpad : artPhone },
-    { name: "Avion", link: "avion", picture: width > 700 ? width > 1100 ? width > 1700 ? avionBig : avion : avionIpad : avionPhone },
+    { name: "Aviation", link: "avion", picture: width > 700 ? width > 1100 ? width > 1700 ? avionBig : avion : avionIpad : avionPhone },
     { name: "Famille", link: "famille", picture: width > 700 ? width > 1100 ? width > 1700 ? familleBig : famille : familleIpad : famillePhone },
     { name: "France", link: "france", picture: width > 700 ? width > 1100 ? width > 1700 ? franceBig : france : franceIpad : francePhone },
     { name: "Nature", link: "nature", picture: width > 700 ? width > 1100 ? width > 1700 ? natureBig : nature : natureIpad : naturePhone },

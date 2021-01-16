@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 import logo from '../../assets/images/logo.png';
 
@@ -18,7 +19,7 @@ const Footer = (props) => {
       <div className="flexcontainer">
         <div className='menufooter'>
           <h4 className="footertitle title4">Menu</h4>
-          <a href="#slider" className="poppins18">Portfolio</a>
+          <HashLink className="poppins18" to={"/#slider"}>Portfolio</HashLink>
 
           <div className="compose poppins18">
             <div className="first">

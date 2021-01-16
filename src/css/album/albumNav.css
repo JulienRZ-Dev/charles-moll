@@ -11,6 +11,15 @@
 
 .albumNavMenuButton {
     margin: 1rem;
+    min-width: 18rem;
+}
+
+/* TABLET */
+@media (min-width: 766px) and (max-width: 1026px) {
+    .albumNavMenuButton {
+        margin: 1rem;
+        min-width: 12rem;
+    }
 }
 
 
