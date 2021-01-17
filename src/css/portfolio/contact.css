@@ -16,6 +16,12 @@
 
 /* CONTACT */
 
+/* hide that honeypot, robots will still see it */
+#website {
+  display: none;
+  visibility: hidden;
+}
+
 .success, .failure{
   text-align: center;
   visibility: hidden;
