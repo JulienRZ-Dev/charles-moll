@@ -1,19 +1,13 @@
 import React from 'react';
 
+import { HashLink } from 'react-router-hash-link';
+
 import logo from '../../assets/images/logo.png';
-
-import Scrollbar from "smooth-scrollbar";
-
-var options = {
-    'damping': 0.1,
-}
-
-// Scrollbar.init(document.querySelector('#my-scrollbar'), options);
 
 const Home = () => {
 
     return (
-        <div id="my-scrollbar">
+        <div>
 
             <div className='accueil'>
                 <img className="logo" src={logo} alt="charles moll"></img>
@@ -41,9 +35,9 @@ const Home = () => {
                     </svg>
                 </div>
                 <div id="menu" className={"menu"}>
-                    <div id="item1" className={"item1 poppins18"}><a className="noLinkStyle" href="#slider">Portfolio</a></div>
-                    <div id="item2" className={"item2 poppins18"}><a className="noLinkStyle" href="#bio">Qui suis-je</a></div>
-                    <div id="item3" className={"item3 poppins18"}><a className="noLinkStyle" href="#contact">Contact</a></div>
+                    <div id="item1" className={"item1 poppins18"}><HashLink className="poppins15" to={"/#slider"}>Portfolio</HashLink></div>
+                    <div id="item2" className={"item2 poppins18"}><HashLink className="poppins15" to={"/#bio"}>Qui suis-je</HashLink></div>
+                    <div id="item3" className={"item3 poppins18"}><HashLink className="poppins15" to={"/#contact"}>Contact</HashLink></div>
                 </div>
             </div>
 

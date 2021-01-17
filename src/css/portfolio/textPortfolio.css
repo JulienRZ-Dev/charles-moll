@@ -34,6 +34,15 @@ html {
     line-height: 40px;
 }
 
+.poppins15 {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    color: white;
+    line-height: 40px;
+}
+
 .zone {
     font-family: 'Poppins', sans-serif;
     font-style: normal;

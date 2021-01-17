@@ -76,6 +76,21 @@
   background-position: top bottom;
 }
 
+@media (min-width: 1600px) {
+  .parallax22 {
+    top: 870px;
+  }
+  .parallax31 {
+    top: 2500px;
+  }
+  .parallax32 {
+    top: 3280px;
+  }
+  .parallax4 {
+    top: 3500px;
+  }
+}
+
 @media (max-width: 1250px) {
   .parallax1 {
     height: 850px;

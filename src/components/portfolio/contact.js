@@ -47,7 +47,7 @@ const Contact = () => {
           <input className="contactInput" required type="text" id="objet" name="objet" placeholder="Objet" />
 
           {/* <label for="message">Message</label> */}
-          <textarea className="contactInput" required type="text" id="message" name="message" placeholder="Message"></textarea>
+          <textarea style={{resize: "none"}} required type="text" id="message" name="message" placeholder="Message"></textarea>
 
           <button data-sitekey="reCAPTCHA_site_key"
             data-callback='onSubmit'

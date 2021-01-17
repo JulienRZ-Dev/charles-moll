@@ -66,8 +66,15 @@ import Portfolio from './components/portfolio/Portfolio';
 import { auth } from './firebase/config';
 import useWindowDimensions from './hooks/useWindowDimensions';
 
+import Scrollbar from "smooth-scrollbar";
 
 function App() {
+
+  // var options = {
+  //   'damping': 0.05,
+  // }
+
+  // Scrollbar.init(document.querySelector('html'), options);
 
   const [authState, setAuthState] = useState(auth.currentUser !== null);
   const [userAuthState, setUserAuthState] = useState(false);
@@ -96,7 +103,7 @@ function App() {
 
   return (
     <div className="App">
-      
+
       <Router>
         <AuthContext.Provider value={{ authState, setAuthState }}>
           <UserAuthContext.Provider value={{ userAuthState, setUserAuthState }}>
