@@ -18,7 +18,7 @@ const Footer = (props) => {
     <div className={props.shouldHaveMargin ? 'footer' : 'footer footerWhitoutMargin'}>
       <div className="flexcontainer">
         <div className='menufooter'>
-          <h4 className="footertitle title4">Menu</h4>
+          <HashLink className="footertitle title4" to={"/"}>Menu</HashLink>
           <HashLink className="poppins18" to={"/#slider"}>Portfolio</HashLink>
 
           <div className="compose poppins18">

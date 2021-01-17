@@ -291,11 +291,11 @@
     }
 
     .zoneSlider {
-        font-size: 25px;
+        font-size: 32px;
     }
 
     .zoneSlider:hover {
-        font-size: 27px;
+        font-size: 32px;
         letter-spacing: 5px;
     }
 
