@@ -1,4 +1,5 @@
 import { db } from './config';
+import { containsAll } from '../utils/containsAll.js';
 
 export async function getParentsFromZone(zone, callback) {
     let children;
@@ -28,8 +29,6 @@ export async function getTagsFromParents(parents, callback) {
 
 
 export async function importPicturesWithQuerie(zone, tags, limit, last, callback) {
-
-    console.log(tags);
 
     let result = []; // the items fetched from the database
     let lastDoc = null // pagination cursor
@@ -66,7 +65,9 @@ export async function importPicturesWithQuerie(zone, tags, limit, last, callback
         snapshots.forEach(doc => {
             let item = doc.data();
             item.id = doc.id;
-            result.push(item);     
+            if(containsAll(item.tags, tags)) { // little hack to make sure the item contains all tags 
+                result.push(item);
+            }     
         }); 
         
 
