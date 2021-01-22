@@ -71,7 +71,7 @@
 
 
 /* TABLET */
-@media (min-width: 766px) and (max-width: 1026px) {
+@media (orientation: portrait) and (min-width: 766px) and (max-width: 1026px) {
     #carroussel {
         height: calc(100vh - 16rem);
         width: calc(100vw - 4rem);
@@ -94,8 +94,38 @@
     }
 }
 
+@media (orientation: landscape) and (max-width: 1026px) {
+    #carroussel {
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .carrousselLikeContainer {
+        bottom: -4rem;
+    }
+
+    .carrousselLeftArrow {
+        left: -2rem;
+    }
+    
+    .carrousselRightArrow {
+        right: -2rem;
+    }
+    
+    .carrousselPicture {
+        max-width: 80vw;
+        max-height: 60vh;
+    }
+
+    .carrousselArrow {
+        width: 1.6rem;
+    }
+}
+
+
 /* SMALL AND REGULAR PHONES */
-@media (max-width: 766px) {
+@media (orientation: portrait) and (max-width: 766px) {
     #carroussel {
         height: calc(100vh - 16rem);
         width: calc(100vw - 4rem);

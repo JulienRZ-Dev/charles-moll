@@ -33,6 +33,7 @@
 
 .albumHeaderTitle {
     font-size: 5rem;
+    text-align: center;
 }
 
 .albumHeaderExportIcon:hover {

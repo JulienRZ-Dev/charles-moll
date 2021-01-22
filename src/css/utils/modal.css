@@ -28,14 +28,25 @@
 }
 
 
+@media (orientation: landscape) and (max-width: 1026px) {
+    #modalInt {
+        margin: 4rem 4rem 4rem 4rem;
+    } 
+
+    #modalClear {
+        top: 1rem;
+        right: 1rem;
+    }
+}
+
 /* TABLET AND PHONES */
-@media (max-width: 1026px) {
+@media (orientation: portrait) and (max-width: 1026px) {
     #modalInt {
         margin: 8rem 2rem 8rem 2rem;
     } 
     
     #modalClear {
-        top: 2rem;
-        right: 2rem;
+        top: 1rem;
+        right: 1rem;
     }
 }

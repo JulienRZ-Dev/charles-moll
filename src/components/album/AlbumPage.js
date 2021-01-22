@@ -12,7 +12,6 @@ import AlbumNav from './AlbumNav';
 import AlbumZones from './AlbumZones';
 import Footer from '../portfolio/footer';
 
-import placeholder from '../../assets/images/flagplaceholder.png'; 
 import exportIcon from '../../assets/icons/exportIcon.png';
 import newTagIcon from '../../assets/icons/newTagIcon.png';
 
@@ -52,6 +51,7 @@ function AlbumPage(props) {
 
     // TAG LIST
     useEffect(() => {
+        window.scrollTo(0, 0);
         getParentsFromZone(props.zone, handleParentsResult);
         requestPictures(handlePicturesResult);
     }, []);
@@ -130,7 +130,7 @@ function AlbumPage(props) {
                             <img
                                 className="albumHeaderPicture"
                                 onLoad={() => setHeaderLoaded(true)}
-                                src={headerLoaded ? props.zonePicture : placeholder}
+                                src={headerLoaded ? props.zonePicture : props.placeholder}
                                 alt=""
                             />
                             {

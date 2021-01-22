@@ -6,6 +6,9 @@ import {
   Route
 } from "react-router-dom";
 
+// PLACEHOLDER
+import placeholderregular from './assets/images/flagplaceholder.png'; 
+import placeholderphone from './assets/images/placeholderphone.png'; 
 
 // PC BIG
 import animauxBig from './assets/images/flaganimaux2100.png';
@@ -44,15 +47,15 @@ import voyagesIpad from './assets/images/flagvoyagesipad.png';
 
 
 // PHONES
-import animauxPhone from './assets/images/flaganimauxphone.jpg';
-import artPhone from './assets/images/flagartphone.jpg';
-import avionPhone from './assets/images/flagavionphone.jpg';
-import famillePhone from './assets/images/flagfamillephone.jpg';
-import francePhone from './assets/images/flagfrancephone.jpg';
-import naturePhone from './assets/images/flagnaturephone.jpg';
-import photoclubPhone from './assets/images/flagphotoclubphone.jpg';
-import viesocialePhone from './assets/images/flagviesocialephone.jpg';
-import voyagesPhone from './assets/images/flagvoyagesphone.jpg';
+import animauxPhone from './assets/images/flaganimauxphone.png';
+import artPhone from './assets/images/flagartphone.png';
+import avionPhone from './assets/images/flagavionphone.png';
+import famillePhone from './assets/images/flagfamillephone.png';
+import francePhone from './assets/images/flagfrancephone.png';
+import naturePhone from './assets/images/flagnaturephone.png';
+import photoclubPhone from './assets/images/flagphotoclubphone.png';
+import viesocialePhone from './assets/images/flagviesocialephone.png';
+import voyagesPhone from './assets/images/flagvoyagesphone.png';
 
 
 import { AuthContext } from './contexts/AuthContext';
@@ -66,20 +69,13 @@ import Portfolio from './components/portfolio/Portfolio';
 import { auth } from './firebase/config';
 import useWindowDimensions from './hooks/useWindowDimensions';
 
-import Scrollbar from "smooth-scrollbar";
+
 
 function App() {
-
-  // var options = {
-  //   'damping': 0.05,
-  // }
-
-  // Scrollbar.init(document.querySelector('html'), options);
 
   const [authState, setAuthState] = useState(auth.currentUser !== null);
   const [userAuthState, setUserAuthState] = useState(false);
   const { width } = useWindowDimensions();
-
 
   const zones = [
     { name: "Animaux", link: "animaux", picture: width > 700 ? width > 1100 ? width > 1700 ? animauxBig : animaux : animauxIpad : animauxPhone },
@@ -93,17 +89,19 @@ function App() {
     { name: "Voyages", link: "voyages", picture: width > 700 ? width > 1100 ? width > 1700 ? voyagesBig : voyages : voyagesIpad : voyagesPhone }
   ];
 
+  const placeholder = width > 1000 ? placeholderregular : placeholderphone;
+
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
       setAuthState(user !== null && user.uid === "wrdikO8SKudzndRsmu35HGBpzVQ2");
     });
     return () => null; // when unmounted we don't want to do anything
-  }, [])
+  }, []);
 
 
   return (
     <div className="App">
-
+      
       <Router>
         <AuthContext.Provider value={{ authState, setAuthState }}>
           <UserAuthContext.Provider value={{ userAuthState, setUserAuthState }}>
@@ -112,7 +110,7 @@ function App() {
               {zones.map((zone) => {
                 return (
                   <Route path={"/" + zone.link}>
-                    <AlbumPage zone={zone.name} zonePicture={zone.picture} key={zone.name} />
+                    <AlbumPage zone={zone.name} placeholder={placeholder} zonePicture={zone.picture} key={zone.name} />
                   </Route>
                 );
               })}
