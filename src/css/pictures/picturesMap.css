@@ -26,7 +26,7 @@
 }
 
 /* SMALL AND REGULAR PHONES */
-@media (max-width: 766px) {
+@media (max-width: 600px) {
     #picturesContainer {
         grid-template-columns: 1fr;
     }
