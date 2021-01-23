@@ -50,3 +50,9 @@
         right: 1rem;
     }
 }
+
+@media (orientation: landscape) and (max-width: 1026px) {
+    #modalInt {
+        margin: 2rem 3rem 2rem 3rem;
+    }
+}

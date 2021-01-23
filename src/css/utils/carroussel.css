@@ -16,7 +16,8 @@
 .carrousselLikeContainer {
     position: absolute;
     bottom: 0;
-    left: calc(50% - 2rem);
+    right: calc(50% - 2rem);
+    width: 4rem;
 
     display: flex;
     justify-content: space-between;
@@ -102,7 +103,12 @@
     }
 
     .carrousselLikeContainer {
-        bottom: -4rem;
+        bottom: 0;
+        right: -1.4rem;
+    }
+
+    .carrousselLikeCount {
+        margin-right: 0.4rem;
     }
 
     .carrousselLeftArrow {
@@ -114,8 +120,8 @@
     }
     
     .carrousselPicture {
-        max-width: 80vw;
-        max-height: 60vh;
+        max-width: 70vw;
+        max-height: 80vh;
     }
 
     .carrousselArrow {
