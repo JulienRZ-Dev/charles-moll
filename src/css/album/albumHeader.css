@@ -44,11 +44,11 @@
 /* TABLET AND PHONES */
 @media (max-width: 1026px) {
     .albumHeader {
-        height: 40vh;
+        height: 50vh;
     }
 
     .albumHeaderPicture {
-        height: 40vh;
+        height: 50vh;
     }
 }
 
