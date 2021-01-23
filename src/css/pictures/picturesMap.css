@@ -19,7 +19,7 @@
 }
 
 /* TABLET */
-@media (min-width: 766px) and (max-width: 1026px) {
+@media (min-width: 600px) and (max-width: 1026px) {
     #picturesContainer {
         grid-template-columns: 1fr 1fr;
     }

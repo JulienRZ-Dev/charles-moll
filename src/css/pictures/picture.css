@@ -87,7 +87,7 @@
 
 
 /* TABLET */
-@media (min-width: 766px) and (max-width: 1026px) {
+@media (min-width: 600px) and (max-width: 1026px) {
     .pictureAlbumContainer {
         width: calc(50vw - 4rem);
         height: calc(50vw - 1rem);
@@ -101,7 +101,7 @@
 }
 
 /* SMALL AND REGULAR PHONES */
-@media (max-width: 766px) {
+@media (max-width: 600px) {
     .pictureAlbumContainer {
         width: calc(100vw - 4rem);
         height: calc(100vw - 1rem);

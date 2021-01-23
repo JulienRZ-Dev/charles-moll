@@ -95,7 +95,7 @@
     }
 }
 
-@media (orientation: landscape) and (max-width: 1026px) {
+@media (orientation: landscape) and (max-width: 1400px) {
     #carroussel {
         height: 100%;
         width: 100%;
@@ -113,10 +113,12 @@
 
     .carrousselLeftArrow {
         left: -2rem;
+        top: calc(50% - 1.2rem);
     }
     
     .carrousselRightArrow {
         right: -2rem;
+        top: calc(50% - 1.2rem);
     }
     
     .carrousselPicture {
