@@ -39,23 +39,27 @@ export async function importPicturesWithQuerie(zone, tags, limit, last, callback
             .where("zone", "==", zone)
             .where("tags", "array-contains-any", tags)
             .orderBy("priority")
+            .orderBy("date", "desc")
             .limit(limit);
     } else if (last === null && !tags.length) { // First fetch with no tags specified
         query = db.collection("pictures") 
             .where("zone", "==", zone)
             .orderBy("priority")
+            .orderBy("date", "desc")
             .limit(limit);
     } else if (last !== null && tags.length) { // Any fetch of a query with tags specified
         query = db.collection("pictures")
             .where("zone", "==", zone)
             .where("tags", "array-contains-any", tags)
             .orderBy("priority")
+            .orderBy("date", "desc")
             .limit(limit)
             .startAfter(last);
     } else { // Any fetch of a query with no tags specified
         query = db.collection("pictures")
             .where("zone", "==", zone)
             .orderBy("priority")
+            .orderBy("date", "desc")
             .limit(limit)
             .startAfter(last);
     }
