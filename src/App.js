@@ -125,8 +125,6 @@ function App() {
               </Route>
             </Switch>
 
-
-
           </UserAuthContext.Provider>
         </AuthContext.Provider>
       </Router>

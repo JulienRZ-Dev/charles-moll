@@ -21,7 +21,7 @@ function AlbumNav(props) {
             <nav className="albumMainNav">
                 <ButtonToggle className="albumNavMenuButton" selected={buttonSelected === "zone"} content="Catégories" onClick={() => handleButtonClick("zone")} defaultSelected={false} />
                 <ButtonToggle className="albumNavMenuButton" selected={buttonSelected === "tags"} content="Recherche" onClick={() => handleButtonClick("tags")} defaultSelected={false} />
-                <ButtonLink className="albumNavMenuButton" content="Joomeo" linkTo="#" />        
+                <ButtonLink className="albumNavMenuButton" content="Joomeo" blank={true} linkTo="https://joomeo.com/charley.photos/index.php?param=ZmU1MXM2ZjMvoqDQQaLfrK0apN_8jx_1i5mczetaVz3rqk6LLRCrjveKPOU-oYefeEGKlUfsBMI" />        
             </nav>
 
             { props.children }

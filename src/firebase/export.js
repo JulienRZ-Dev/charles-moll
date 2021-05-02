@@ -38,6 +38,7 @@ export async function exportPicture(item, callback) {
     item.picture = downloadURL;
     item.path = path;
     item.likes = 0;
+    item.priority = parseInt(item.priority);
     item.date = Date.now();
 
     // FIRESTORE

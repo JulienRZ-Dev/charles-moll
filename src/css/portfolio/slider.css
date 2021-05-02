@@ -30,6 +30,7 @@
 }
 
 .divzone {
+    width: 600px;
     height: 750px;
     overflow: hidden;
 }

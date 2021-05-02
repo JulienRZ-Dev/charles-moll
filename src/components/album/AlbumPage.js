@@ -24,6 +24,7 @@ import { AuthContext } from '../../contexts/AuthContext';
 import { UserAuthContext } from '../../contexts/UserAuthContext';
 
 import { Redirect } from 'react-router-dom';
+import { deletePicture, deletePicturesFromTags } from '../../firebase/delete';
 
 
 function AlbumPage(props) {
@@ -83,11 +84,11 @@ function AlbumPage(props) {
     // PICTURES REQUESTS
     function handleSearch() {
         setLoading(true);
-        importPicturesWithQuerie(props.zone, tagsSelected, 8, null, handleResetPicturesResult);
+        importPicturesWithQuerie(props.zone, tagsSelected, 16, null, handleResetPicturesResult);
     }
 
     function requestPictures(callback) {
-        importPicturesWithQuerie(props.zone, tagsSelected, 8, last, callback);
+        importPicturesWithQuerie(props.zone, tagsSelected, 16, last, callback);
     }
 
     function handleResetPicturesResult(result, last) { // when a new search is done pictures state must reset
@@ -97,8 +98,12 @@ function AlbumPage(props) {
     }
 
     function handlePicturesResult(result, last) { // when the add button is requested the result must be added to the state
-        setLast(last);
-        setPictures(pictures.concat(result));
+        if(result) {
+            setLast(last);
+            setPictures(pictures.concat(result));
+        } else {
+            console.log('no more pictures')
+        }
     }
 
     function resetTagSelection() {
@@ -148,6 +153,10 @@ function AlbumPage(props) {
                                             onClick={() => setExportTagModalVisible(true)}
                                             alt=""
                                         />
+
+                                        <svg className="albumHeaderExportIcon" onClick={() => deletePicturesFromTags(tagsSelected, props.zone)} width="100" height="60" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M77.5 29.1667V27.5H79.1667H81.6667V25V16.6667V14.1667H79.1667H65.6189L62.1845 10.7322L61.4522 10H60.4167H39.5834H38.5478L37.8156 10.7322L34.3812 14.1667H20.8334H18.3334V16.6667V25V27.5H20.8334H22.5V29.1667V79.1667C22.5 85.1307 27.3693 90 33.3334 90H66.6667C72.6308 90 77.5 85.1307 77.5 79.1667V29.1667ZM51.7678 54.2261L58.8334 47.1605L61.1728 49.5L54.1073 56.5656L52.3395 58.3333L54.1073 60.1011L61.1728 67.1667L58.8334 69.5061L51.7678 62.4406L50 60.6728L48.2323 62.4406L41.1667 69.5061L38.8272 67.1667L45.8928 60.1011L47.6647 58.3292L45.8886 56.5614L38.7897 49.4958L41.1292 47.1564L48.2364 54.2303L50.0042 55.9897L51.7678 54.2261Z" fill="#FF0000" stroke="white" stroke-width="5"/>
+                                        </svg>
                                     </div>
                                     :
                                     null

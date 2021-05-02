@@ -4,40 +4,35 @@ import React from 'react';
 
 const Contact = () => {
 
-  function sendEmail(e) {
-    e.preventDefault();
-    var x = document.forms["contact_form"]["website"].value;
-
+  function sendEmail(event) {
+    event.preventDefault();
+    var x = document.getElementById("website").value;
+    console.log(x);
     if (x == "" || x == null) { // if the honeypot was ignored, it's a hu-mon
-      document.getElementById("contactform").submit(); // link to process form and redirect to thank you
-
-
-      emailjs.sendForm('service_yywk6mo', 'template_30xnqbi', e.target, 'user_FlLAVlddlRiHWB9R1vge7')
-        .then((result) => {
+      emailjs.sendForm('service_yywk6mo', 'template_30xnqbi', event.target, 'user_FlLAVlddlRiHWB9R1vge7')
+        .then(function () {
+          console.log('SUCCESS!');
           let success = document.getElementById("success");
-          console.log(result.text);
+          event.target.reset();
           success.style.visibility = "visible";
           setTimeout(() => {
             success.style.visibility = "hidden";
           }, 5000);
-
-        }, (error) => {
+        }, function (error) {
           let failure = document.getElementById("failure");
+          event.target.reset();
           console.log(error.text);
           failure.style.visibility = "visible";
           setTimeout(() => {
             failure.style.visibility = "hidden";
           }, 5000);
+          console.log('FAILED...', error);
         });
-      e.target.reset()
-
-    }
-
-    else { // the honeypot was filled in, it's a robot
+    } else { // the honeypot was filled in, it's a robot
+      console.log("robot");
       return false;
     }
-
-  }
+  };
 
   return (
     <div id="contact" className='perroquet'>
@@ -60,10 +55,9 @@ const Contact = () => {
           {/* <label for="message">Message</label> */}
           <textarea style={{ resize: "none" }} required type="text" id="message" name="message" placeholder="Message"></textarea>
 
-          <button data-sitekey="reCAPTCHA_site_key"
-            data-callback='onSubmit'
-            data-action='submit'
-            className='contactcodeurs' type="submit" value="Send Message">Envoyer</button>
+          <div class="divSendButton"> 
+            <button className='contactcodeurs' type="submit" value="Send">Envoyer</button>
+          </div>
 
           <p id="success" className="success poppinsRegular">Message envoyé !</p>
           <p id="failure" className="failure poppinsRegular">Une erreur est survenue...</p>

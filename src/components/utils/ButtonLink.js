@@ -4,7 +4,7 @@ function ButtonLink(props) {
 
     return(
         <button id={props.id} className={props.className + " button buttonLink"}>
-            <a className="subtitle white" href={props.linkTo}>{props.content}</a>
+            <a className="subtitle white" target={ props.blank ? "_blank" : ""} href={props.linkTo}>{props.content}</a>
         </button>
     );
 }
