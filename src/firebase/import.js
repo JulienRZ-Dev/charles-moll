@@ -44,7 +44,8 @@ function importPicturesWithMultiplesTag(zone, tags, callback) {
     query = db.collection("pictures")
         .where("zone", "==", zone)
         .where("tags", "array-contains-any", tags)
-        .orderBy("priority");
+        .orderBy("priority")
+        .orderBy("date");
 
     function hasAllTags(arr, arr2) { // little hack to make sure the item contains all tags
         return arr.every(item => arr2.some(item2 => item2.title === item.title));
