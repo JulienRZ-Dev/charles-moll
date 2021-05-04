@@ -16,7 +16,7 @@ function AlbumZones(props) {
     const zones = [
         { name: "Animaux", link: "animaux", picture: animaux },
         { name: "Art et Culture", link: "art", picture: art },
-        { name: "Avion", link: "avion", picture: avion },
+        { name: "Aviation", link: "avion", picture: avion },
         { name: "Famille", link: "famille", picture: famille },
         { name: "France", link: "france", picture: france },
         { name: "Nature", link: "nature", picture: nature },

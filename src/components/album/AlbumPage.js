@@ -12,6 +12,8 @@ import AlbumNav from './AlbumNav';
 import AlbumZones from './AlbumZones';
 import Footer from '../portfolio/footer';
 
+import SyncLoader from "react-spinners/SyncLoader";
+
 import exportIcon from '../../assets/icons/exportIcon.png';
 import newTagIcon from '../../assets/icons/newTagIcon.png';
 
@@ -37,6 +39,7 @@ function AlbumPage(props) {
     const [tags, setTags] = useState([]); // tags for the current zone
     const [tagsSelected, setTagsSelected] = useState([]); // selecte tags 
     const [loading, setLoading] = useState(false); // loading indicator 
+    const [picturesDeleteLoading, setPicturesDeleteLoading] = useState(false);
     const [last, setLast] = useState(null); // last document from firebase ( for pagination )
     const [pictures, setPictures] = useState([]); // pictures loaded from firebase
     const [resetCount, setResetCount] = useState(0); // hack for reset components
@@ -123,6 +126,17 @@ function AlbumPage(props) {
         }
     }
 
+    function handlePictureDeletion() {
+        setPicturesDeleteLoading(true);
+        deletePicturesFromTags(tagsSelected, props.zone, onPicturesDeleted);
+    }
+
+    function onPicturesDeleted(message) {
+        if(message === "success") {
+            setPicturesDeleteLoading(false);
+        }
+    } 
+
 
     return (
         <div>
@@ -153,10 +167,21 @@ function AlbumPage(props) {
                                             onClick={() => setExportTagModalVisible(true)}
                                             alt=""
                                         />
+                                        
+                                        { picturesDeleteLoading ? 
+                                            <div>
+                                                <SyncLoader
+                                                    size={8}
+                                                    color={"#000"}
+                                                    loading={true}
+                                                />
+                                            </div>
+                                        : 
+                                            <svg className="albumHeaderExportIcon" onClick={() => handlePictureDeletion()} width="100" height="60" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M77.5 29.1667V27.5H79.1667H81.6667V25V16.6667V14.1667H79.1667H65.6189L62.1845 10.7322L61.4522 10H60.4167H39.5834H38.5478L37.8156 10.7322L34.3812 14.1667H20.8334H18.3334V16.6667V25V27.5H20.8334H22.5V29.1667V79.1667C22.5 85.1307 27.3693 90 33.3334 90H66.6667C72.6308 90 77.5 85.1307 77.5 79.1667V29.1667ZM51.7678 54.2261L58.8334 47.1605L61.1728 49.5L54.1073 56.5656L52.3395 58.3333L54.1073 60.1011L61.1728 67.1667L58.8334 69.5061L51.7678 62.4406L50 60.6728L48.2323 62.4406L41.1667 69.5061L38.8272 67.1667L45.8928 60.1011L47.6647 58.3292L45.8886 56.5614L38.7897 49.4958L41.1292 47.1564L48.2364 54.2303L50.0042 55.9897L51.7678 54.2261Z" fill="#FF0000" stroke="white" stroke-width="5"/>
+                                            </svg>
+                                        }
 
-                                        <svg className="albumHeaderExportIcon" onClick={() => deletePicturesFromTags(tagsSelected, props.zone)} width="100" height="60" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M77.5 29.1667V27.5H79.1667H81.6667V25V16.6667V14.1667H79.1667H65.6189L62.1845 10.7322L61.4522 10H60.4167H39.5834H38.5478L37.8156 10.7322L34.3812 14.1667H20.8334H18.3334V16.6667V25V27.5H20.8334H22.5V29.1667V79.1667C22.5 85.1307 27.3693 90 33.3334 90H66.6667C72.6308 90 77.5 85.1307 77.5 79.1667V29.1667ZM51.7678 54.2261L58.8334 47.1605L61.1728 49.5L54.1073 56.5656L52.3395 58.3333L54.1073 60.1011L61.1728 67.1667L58.8334 69.5061L51.7678 62.4406L50 60.6728L48.2323 62.4406L41.1667 69.5061L38.8272 67.1667L45.8928 60.1011L47.6647 58.3292L45.8886 56.5614L38.7897 49.4958L41.1292 47.1564L48.2364 54.2303L50.0042 55.9897L51.7678 54.2261Z" fill="#FF0000" stroke="white" stroke-width="5"/>
-                                        </svg>
                                     </div>
                                     :
                                     null
