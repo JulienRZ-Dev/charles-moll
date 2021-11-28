@@ -17,7 +17,7 @@ function ExportTagForm() {
         {key: 5, title: "Art et Culture"},
         {key: 6, title: "Photoclub"},
         {key: 7, title: "France"},
-        {key: 8, title: "Avaition"}
+        {key: 8, title: "Aviation"}
     ];
 
     const [parents, setParents] = useState([]);
