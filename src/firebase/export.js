@@ -3,13 +3,14 @@ import { uuidv4 } from '../utils/uuid';
 
 
 // EXPORT NEW TAG
-export async function exportNewTag(tag, parent, callback) {
+export async function exportNewTag(tag, zone, parent, callback) {
 
-    db.collection("tags").where("title", "==", tag).get().then((res) => {
+    db.collection("tags").where("zone", "==", zone).where("title", "==", tag).get().then((res) => {
         if(!res.empty) {
             callback("failure", "Ce tag existe déjà");
         } else {
             db.collection("tags").add({
+                zone: zone,
                 title: tag,
                 parent: parent  
             }).then(() => {

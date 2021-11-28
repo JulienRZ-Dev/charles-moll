@@ -4,8 +4,6 @@ import { auth } from './config';
 export function getAdminAuthState() {
     
     let user = auth.currentUser;
-
-    console.log(auth.currentUser);
     
     if(user && user.uid === "wrdikO8SKudzndRsmu35HGBpzVQ2") {
         return true;

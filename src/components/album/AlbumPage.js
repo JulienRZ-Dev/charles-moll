@@ -17,7 +17,7 @@ import SyncLoader from "react-spinners/SyncLoader";
 import exportIcon from '../../assets/icons/exportIcon.png';
 import newTagIcon from '../../assets/icons/newTagIcon.png';
 
-import { getParentsFromZone, getTagsFromParents } from '../../firebase/import';
+import { getParentsFromZone, getTagsFromParentsAndZone } from '../../firebase/import';
 import { importPicturesWithQuerie } from '../../firebase/import';
 import { updateLikes } from '../../firebase/update';
 
@@ -26,7 +26,7 @@ import { AuthContext } from '../../contexts/AuthContext';
 import { UserAuthContext } from '../../contexts/UserAuthContext';
 
 import { Redirect } from 'react-router-dom';
-import { deletePicture, deletePicturesFromTags } from '../../firebase/delete';
+import { deletePicturesFromTags } from '../../firebase/delete';
 
 
 function AlbumPage(props) {
@@ -63,7 +63,7 @@ function AlbumPage(props) {
 
     function handleParentsResult(result) {
         setParents(result);
-        getTagsFromParents(result, handleTagsResult);
+        getTagsFromParentsAndZone(props.zone, result, handleTagsResult);
     }
 
     function handleTagsResult(result) {

@@ -5,7 +5,7 @@ import SyncLoader from "react-spinners/SyncLoader";
 import TagMenu from '../tags/TagMenu';
 import PicturesForm from './PicturesForm';
 
-import { getParentsFromZone, getTagsFromParents } from '../../firebase/import';
+import { getParentsFromZone, getTagsFromParentsAndZone } from '../../firebase/import';
 import { exportPicture } from "../../firebase/export";
 
 
@@ -68,13 +68,18 @@ function ExportForm() {
     function updateZoneAndGetChildren(e) {
         setTagsSelected([]); // Remove all tags from selection
         setResetTags(resetTags + 1); // reset the TagMenu
-        setZone(e.target.value); // set the new zone
-        getParentsFromZone(e.target.value, handleParentsResult);
+        if(e.target.value === "") {
+            setZone(null); // set the new zone
+            setParents(null);
+        } else {
+            setZone(e.target.value); // set the new zone
+            getParentsFromZone(e.target.value, handleParentsResult);
+        }
     }
 
-    function handleParentsResult(result) {
+    function handleParentsResult(result, zone) {
         setParents(result);
-        getTagsFromParents(result, handleTagsResult);
+        getTagsFromParentsAndZone(zone, result, handleTagsResult);
     }
 
     function handleTagsResult(result) {
@@ -223,7 +228,7 @@ function ExportForm() {
 
                 {/* TAGS */}
                     <h3 className="subtitle tagsLabel">TAGS</h3>
-                    { parents.length ?
+                    { parents && parents.length ?
                         <TagMenu 
                             parents={parents} 
                             tags={tags} 

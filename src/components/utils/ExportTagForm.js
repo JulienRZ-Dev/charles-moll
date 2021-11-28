@@ -4,23 +4,47 @@ import SyncLoader from "react-spinners/SyncLoader";
 
 import { exportNewTag } from '../../firebase/export';
 import { deleteTag } from '../../firebase/delete';
+import { getParentsFromZone } from '../../firebase/import';
 
 function ExportTagForm() {
 
-    const parents = [
-        {title: "Pays", key: 0},
-        {title: "Region", key: 1},
-        {title: "Date", key: 2},
-        {title: "Lieux", key: 3},
-        {title: "Nom", key: 4},
-        {title: "Evenements", key: 5}
+    const zones = [
+        {key: 0, title: "Nature"},
+        {key: 1, title: "Vie Sociale"},
+        {key: 2, title: "Famille"},
+        {key: 3, title: "Voyages"},
+        {key: 4, title: "Animaux"},
+        {key: 5, title: "Art et Culture"},
+        {key: 6, title: "Photoclub"},
+        {key: 7, title: "France"},
+        {key: 8, title: "Avaition"}
     ];
 
+    const [parents, setParents] = useState([]);
+    const [zoneSelected, setZoneSelected] = useState(null);
     const [parentSelected, setParentSelected] = useState(null);
     const [tagState, setTagState] = useState(null);
     const [newTagMessage, setNewTagMessage] = useState(null);
     const [newTag, setNewTag] = useState(null); // new tag to add to the database
 
+    // ZONE
+    function handleZoneSelected(name) {
+        setZoneSelected(name);
+        setParentSelected(null);
+        getParentsFromZone(name, handleParentsResult);
+    }
+
+    function handleParentsResult(parents) {
+        console.log(parents);
+        let formattedParents = []
+        for(let i = 0; i < parents.length; i++) {
+            formattedParents.push({
+                key: i,
+                title: parents[i]
+            })
+        }
+        setParents(formattedParents);
+    }
 
     // PARENT TAG
     function handleParentSelected(key) {
@@ -36,7 +60,7 @@ function ExportTagForm() {
             handleNewTagResult("failure", "Le tag ne peut pas être vide");
         } else {
             setTagState("loading");
-            exportNewTag(newTag, parentSelected, handleNewTagResult);
+            exportNewTag(newTag, zoneSelected, parentSelected, handleNewTagResult);
         }
     }
 
@@ -68,13 +92,28 @@ function ExportTagForm() {
                 <h1 className="title white">Nouveau tag</h1>
             </header>
 
+            {/* NEW TAG ZONE */}
+            <div id="newTagZone">
+                {
+                    zones.map((item) => {
+                        return (
+                            <div className="checkboxAndLabel" key={item.key}>
+                                <input type="radio" className="input" name={"zone"} onChange={() => handleZoneSelected(item.title)} />
+                                <label>{item.title}</label>
+                            </div>
+                        )
+                    })
+                }
+            </div>
+
+
             {/* NEW TAG PARENT */}
             <div id="newTagParent">
                 {
                     parents.map((item) => {
                         return (
                             <div className="checkboxAndLabel" key={item.key}>
-                                <input type="radio" className="input" name={"group"} onChange={() => handleParentSelected(item.key)} />
+                                <input type="radio" checked={parentSelected === item.title} className="input" name={"parent"} onChange={() => handleParentSelected(item.key)} />
                                 <label>{item.title}</label>
                             </div>
                         )

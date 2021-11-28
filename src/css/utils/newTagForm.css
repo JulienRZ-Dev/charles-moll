@@ -12,6 +12,14 @@
     margin: 1rem;
 }
 
+#newTagZone {
+    width: 80%;
+    margin: 1rem;
+
+    display: flex;
+    justify-content: space-around;  
+}
+
 #newTagParent {
     width: 80%;
     margin: 1rem;

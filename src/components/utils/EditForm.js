@@ -5,7 +5,7 @@ import SyncLoader from "react-spinners/SyncLoader";
 import TagMenu from '../tags/TagMenu';
 import ImagePreview from './ImagePreview';
 
-import { getParentsFromZone, getTagsFromParents } from '../../firebase/import';
+import { getParentsFromZone, getTagsFromParentsAndZone } from '../../firebase/import';
 import { updatePicture } from "../../firebase/update";
 
 function EditForm(props) {
@@ -35,7 +35,7 @@ function EditForm(props) {
 
     function handleParentsResult(result) {
         setParents(result);
-        getTagsFromParents(result, handleTagsResult);
+        getTagsFromParentsAndZone(zone, result, handleTagsResult);
     }
 
     function handleTagsResult(result) {

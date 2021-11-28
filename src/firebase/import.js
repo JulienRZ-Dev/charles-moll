@@ -5,23 +5,25 @@ export async function getParentsFromZone(zone, callback) {
     db.collection("zones").where("title", "==", zone).get().then((docs) => { // get the zone doc
         docs.forEach((doc) => {
             children = doc.data().children;
-        })
-        callback(children);
+        });
+        callback(children, zone);
     });
 }
 
 
-export async function getTagsFromParents(parents, callback) {
+export async function getTagsFromParentsAndZone(zone, parents, callback) {
 
     let tags = [];
 
     db.collection("tags")
+        .where("zone", "==", zone)
         .where("parent", "in", parents)
         .orderBy("title")
         .get().then((docs) => {
             docs.forEach((doc) => {
                 tags.push(doc.data());
             });
+            console.log(tags);
             callback(tags);
         })
 }
@@ -105,6 +107,7 @@ function importPicturesWithSingleTag(zone, tags, limit, last, callback) {
 
         snapshots.forEach((doc) => {
             let item = doc.data();
+            console.log(item);
             item.id = doc.id;
             result.push(item);
         });
