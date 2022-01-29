@@ -24,6 +24,10 @@
     background-color: var(--primary);
 }
 
+.buttonDisabled {
+    background-color: var(--secondary-background);
+}
+
 
 /* SMALL AND REGULAR PHONES */
 @media (max-width: 768px) {

@@ -188,7 +188,7 @@ function AlbumPage(props) {
                             }
                         </header>
 
-                        <AlbumNav setMenuMode={setMenuMode}>
+                        <AlbumNav setMenuMode={setMenuMode} zone={props.zone}>
                             {
                                 menuMode === "zone" ?
                                     <AlbumZones zone={props.zone} /> :

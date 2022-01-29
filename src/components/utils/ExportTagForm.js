@@ -35,7 +35,6 @@ function ExportTagForm() {
     }
 
     function handleParentsResult(parents) {
-        console.log(parents);
         let formattedParents = []
         for(let i = 0; i < parents.length; i++) {
             formattedParents.push({
